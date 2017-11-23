@@ -22,3 +22,17 @@ echo "difference " . $interval->y . " years, " . $interval->m." months, ".$inter
 // shows the total amount of days (not divided into years, months and days like above)
 echo "difference " . $interval->days . " days ";
 }
+
+function days_add($strto, $days)
+{
+    $date = new DateTime(date("Y-m-d", $strto));
+    return $date->add(new DateInterval("P{$days}D"))->format("Y-m-d");
+}
+
+function days_diff($date1, $date2)
+{
+    $d1 = new DateTime($date1);
+    $d2 = new DateTime($date2);
+    return $d1->diff($d2)->days;
+}
+
