@@ -12,5 +12,5 @@
 8. 阿里云控制台增加安全组规则
 
 ### 管理
-1.用户保存在/etc/ocserv/ocpasswd
+1. 用户保存在/etc/ocserv/ocpasswd
 2. 创建用户 /etc/ocserv/ocpasswd 用户名，输入两次密码，不用重启服务
