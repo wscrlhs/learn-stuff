@@ -36,3 +36,11 @@ function days_diff($date1, $date2)
     return $d1->diff($d2)->days;
 }
 
+//过滤
+function xss_clean($str){
+    $str = trim($str);  //清理空格
+    $str = strip_tags($str);   //过滤html标签
+    $str = htmlspecialchars($str);   //将字符内容转化为html实体
+    $str = addslashes($str);
+    return $str;
+}
