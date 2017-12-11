@@ -21,4 +21,8 @@ select timestampadd(day, 1, '2008-08-08 08:00:00'); -- 2008-08-09 08:00:00
 select date_add('2008-08-08 08:00:00', interval 1 day); -- 2008-08-09 08:00:00
 ```
 
+### mysql保留小数，不四舍五入直接截去小数后部分
+`TRUNCATE(X,D)`
+[https://dev.mysql.com/doc/refman/5.7/en/mathematical-functions.html#function_truncate](https://dev.mysql.com/doc/refman/5.7/en/mathematical-functions.html#function_truncate)
+
 
