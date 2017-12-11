@@ -7,7 +7,18 @@ select
 TimeStampDiff(day,from_unixtime(date1,'%Y-%m-%d'),from_unixtime(date2,'%Y-%m-%d'))
 from table
 ```
+### mysql 时间天数差
+```
+select datediff('2008-08-08 12:00:00', '2008-08-01 00:00:00');
+```
 
 ### mysql 保留两位小数
 ` select round(number,2) from table`
+
+### mysql 时间加天数
+```mysql
+select timestampadd(day, 1, '2008-08-08 08:00:00'); -- 2008-08-09 08:00:00
+select date_add('2008-08-08 08:00:00', interval 1 day); -- 2008-08-09 08:00:00
+```
+
 
