@@ -13,4 +13,5 @@
 
 ### 管理
 1. 用户保存在/etc/ocserv/ocpasswd
-2. 创建用户 /etc/ocserv/ocpasswd 用户名，输入两次密码，不用重启服务
+2. 创建用户 ocpasswd -c /etc/ocserv/ocpasswd test
+3. /etc/ocserv/ocpasswd 用户名，输入两次密码，不用重启服务
