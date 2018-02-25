@@ -2,16 +2,16 @@
 阿里云服务器+centos6.8
 
 ### 步骤
-0. yum install epel-release
-1. 使用yum install ocserv安装服务
-2. 修改配置文件/etc/ocserv/ocserv.conf,配置验证方式，分配ip地址
-3. 重启服务service ocserv start
-4. 配置防火墙 /etc/sysconfig/iptables
-5. 启动防火墙 service iptables start
-6. 添加路由转发，将/etc/sysctl.conf中的net.ipv4.ip_forward值改为1
-7. 上面那个是内核设置，要让它立即生效，执行命令sysctl -p
+0. `yum install epel-release`
+1. 使用 `yum install ocserv` 安装服务
+2. 修改配置文件 `/etc/ocserv/ocserv.conf` ,配置验证方式，分配ip地址
+3. 重启服务 `service ocserv start`
+4. 配置防火墙 `/etc/sysconfig/iptables`
+5. 启动防火墙 `service iptables start`
+6. 添加路由转发，将 `/etc/sysctl.conf` 中的 `net.ipv4.ip_forward` 值改为1
+7. 上面那个是内核设置，要让它立即生效，执行命令 `sysctl -p` 
 8. 阿里云控制台增加安全组规则  
-9. 开启ocserv服务  ocserv -c /etc/ocserv/ocserv.conf -f -d 1
+9. 开启ocserv服务  `ocserv -c /etc/ocserv/ocserv.conf -f -d 1`
 10. 设置开机自启 `systemctl enable ocserv && systemctl start ocserv`
  
 
@@ -58,9 +58,9 @@ $ certtool --generate-certificate --load-privkey server-key.pem --load-ca-certif
 ```
 
 ### 管理
-1. 用户保存在/etc/ocserv/ocpasswd
-2. 创建用户 ocpasswd -c /etc/ocserv/ocpasswd username
-3. /etc/ocserv/ocpasswd 用户名，输入两次密码，不用重启服务
+1. 用户保存在 `/etc/ocserv/ocpasswd`
+2. 创建用户 `ocpasswd -c /etc/ocserv/ocpasswd username`
+3. 或者 `ocpasswd username`，输入两次密码，不用重启服务
 
 ## 参考：  
 [搭建ocserv VPN使IOS访问外国常用网站](http://www.itts-union.com/2155.html)
