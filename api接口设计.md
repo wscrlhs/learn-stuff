@@ -1,4 +1,6 @@
+```php
 <?php
+
 
 /*************************************************
  *       设计API的基本流程
@@ -127,3 +129,4 @@ function returnData($data)
     $urlencodeData = urlencode($cipherData);
     return $urlencodeData;
 }
+```
