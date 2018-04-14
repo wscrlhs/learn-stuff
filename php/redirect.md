@@ -2,6 +2,7 @@
 
 1. I don’t really care about redirecting the user. I just want to forward the POST data.
 
+curl
 ```php
 <?php
 
@@ -71,4 +72,7 @@ $etc = isset($_POST['etc']) ? $_POST['etc'] : null;
     window.onload = submitForm;
 </script>
 ```
+
+reference: [PHP – Redirecting A Form With POST Variables](http://thisinterestsme.com/php-redirecting-a-form-with-post-variables/)
+
 
